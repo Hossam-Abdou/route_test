@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BestSeller extends StatelessWidget {
+  const BestSeller({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class BestSeller extends StatelessWidget {
         itemBuilder: (context, index) => Container(
           width: 240,
           decoration: BoxDecoration(
-            color: Color(0XFFF5F5FA),
+            color: const Color(0XFFF5F5FA),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(

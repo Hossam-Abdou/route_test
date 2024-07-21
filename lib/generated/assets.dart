@@ -2,7 +2,6 @@
 class Assets {
   Assets._();
 
-  static const String imagesAudiBooks. = 'assets/images/AudiBooks..png';
   static const String imagesBeathing = 'assets/images/beathing.png';
   static const String imagesCool = 'assets/images/cool.png';
   static const String imagesDocument = 'assets/images/Document.png';
@@ -11,9 +10,8 @@ class Assets {
   static const String imagesImage1 = 'assets/images/image_1.png';
   static const String imagesImage2 = 'assets/images/image_2.png';
   static const String imagesLogo = 'assets/images/logo.png';
-  static const String imagesLogo Small = 'assets/images/Logo Small.png';
   static const String imagesLove = 'assets/images/love.png';
-  static const String imagesMedication = 'assets/images/medication.png';
+  static const String imagesMedication = 'assets/images/meditate.png';
   static const String imagesRelax = 'assets/images/relax.png';
   static const String imagesSad = 'assets/images/sad.png';
   static const String imagesSetting = 'assets/images/Setting.png';

@@ -17,7 +17,7 @@ class RecommendList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Image.asset(screens[index]),
         itemCount: screens.length,
-        separatorBuilder: (context, index) => SizedBox(width: 16,),
+        separatorBuilder: (context, index) => const SizedBox(width: 16,),
       ),
     );
   }

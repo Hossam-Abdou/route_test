@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class EmojisTabs extends StatelessWidget {
+  const EmojisTabs({super.key});
+
   @override
   Widget build(BuildContext context) {
     List<String> screens = [
@@ -9,16 +11,25 @@ class EmojisTabs extends StatelessWidget {
       'assets/images/sad.png',
       'assets/images/happy.png',
     ];
+    List<String> tabsTitle = ['Love', 'Cool', 'Sad', 'Happy'];
 
     return SizedBox(
-      height: 60,
+      height: 62,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => CircleAvatar(
-                  backgroundImage: AssetImage(
-                screens[index],
-              )),
-          separatorBuilder: (context, index) => SizedBox(
+          itemBuilder: (context, index) => Center(
+            child: Column(
+              children: [
+                CircleAvatar(
+                        backgroundImage: AssetImage(
+                      screens[index],
+                    ),),
+                Text(tabsTitle[index],),
+
+              ],
+            ),
+          ),
+          separatorBuilder: (context, index) =>const  SizedBox(
                 width: 25,
               ),
           itemCount: screens.length),

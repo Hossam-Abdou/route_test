@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:route_test/utils/app_colors/app_colors.dart';
 
 class CategoriesTabs extends StatelessWidget {
+  const CategoriesTabs({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -10,13 +12,13 @@ class CategoriesTabs extends StatelessWidget {
       'Art','Business','Comedy','Drama'
     ];
     return  SizedBox(
-      height: 30,
+      height: 35,
 
       child: ListView.separated(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) =>Container(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: AppColors.containerColor,
             borderRadius: BorderRadius.circular(12),
@@ -28,8 +30,8 @@ class CategoriesTabs extends StatelessWidget {
         ),),
         itemCount: tabs.length,
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(
-            width: 12,
+          return const SizedBox(
+            width: 30,
           );
         },
       ),
