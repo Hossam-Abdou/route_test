@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:route_test/utils/app_colors/app_colors.dart';
-import 'package:route_test/utils/best_seller/best_seller.dart';
 import 'package:route_test/utils/custom_section/custom_section.dart';
+import 'package:route_test/utils/custom_tab_bar.dart';
+import 'package:route_test/utils/first_screen/best_seller/best_seller.dart';
 import 'package:route_test/utils/recommend__list.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,11 +10,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-const List<String> tabs = ['Art', 'Business', 'Comedy', 'Drama'];
+    const List<String> tabs = ['Art', 'Business', 'Comedy', 'Drama'];
+
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(items: const [
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
@@ -45,35 +47,7 @@ const List<String> tabs = ['Art', 'Business', 'Comedy', 'Drama'];
                   secondColor:AppColors.primaryColor ,
 
                 ),
-                TabBar(
-                  isScrollable: true,
-                  labelPadding: const EdgeInsets.only(right: 20),
-                  tabAlignment: TabAlignment.center,
-                  labelStyle: GoogleFonts.poppins(fontSize: 14),
-                  indicatorColor: Colors.transparent,
-                  dividerColor: Colors.transparent,
-                  tabs: tabs.map((tab) {
-                    return Tab(
-                      child: Container(
-                        padding: const EdgeInsets.all(7),
-                        decoration: BoxDecoration(
-                          color: AppColors.containerColor,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          tab,
-                          style: GoogleFonts.poppins(
-                            color: AppColors.blueColor,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-
-
+                const CustomTabBar(),
                 // CategoriesTabs(),
                 // SizedBox(height: 20,),
                 CustomSection(

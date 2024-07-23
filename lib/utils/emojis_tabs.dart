@@ -13,26 +13,28 @@ class EmojisTabs extends StatelessWidget {
     ];
     List<String> tabsTitle = ['Love', 'Cool', 'Sad', 'Happy'];
 
-    return SizedBox(
-      height: 62,
-      child: ListView.separated(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => Center(
-            child: Column(
-              children: [
-                CircleAvatar(
-                        backgroundImage: AssetImage(
-                      screens[index],
-                    ),),
-                Text(tabsTitle[index],),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        for(int i = 0; i < screens.length; i++)
 
-              ],
+            InkWell(
+              onTap: () {
+                debugPrint('hello');
+              },
+              child: Column(
+                        children: [
+                   CircleAvatar(radius: 27,
+                    backgroundImage: AssetImage(
+                      screens[i],
+                    ),),
+
+              Text(tabsTitle[i],),
+
+                        ],
+                      ),
             ),
-          ),
-          separatorBuilder: (context, index) =>const  SizedBox(
-                width: 25,
-              ),
-          itemCount: screens.length),
+      ],
     );
   }
 }
